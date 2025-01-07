@@ -152,7 +152,3 @@ In HeidiSQL right click Unnamed> Create> New Database> Name it osTicket> OK. The
 ![image](https://github.com/user-attachments/assets/e708c363-214f-4918-9768-3a11bf4739e9)
 
 ![image](https://github.com/user-attachments/assets/09d54ad7-0768-458f-ab76-90455dc1fd62)
-
-Last steps, for clean up go to C drive> inetpub> wwwroot> osTicket and look for the setup file and delete it. Then go to C drive> inetpub> wwwroot> osTicket> include right click on ost-config.php> Properties> Security> Advanced> Select Everyone and click edit> only leave Read & Execute and Read checked, then apply settings:
-
-
