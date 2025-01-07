@@ -152,3 +152,7 @@ In HeidiSQL right click Unnamed> Create> New Database> Name it osTicket> OK. The
 ![image](https://github.com/user-attachments/assets/e708c363-214f-4918-9768-3a11bf4739e9)
 
 ![image](https://github.com/user-attachments/assets/09d54ad7-0768-458f-ab76-90455dc1fd62)
+
+<h2>osTicket Installed!</h2>
+
+<b>osTicket is now installed and ready for use! In the next project I will walk you through how to configure agents, their permissions and access, users, and more!  </b>
