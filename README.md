@@ -77,22 +77,82 @@ Download MySQL:
 ![image](https://github.com/user-attachments/assets/5f617264-c988-446d-927b-47e022e24a3f)
 
 Next, I have to setup the login credentials and I'll write them down just so I remember, since this is only a project. Do not write passwords down in real life:
+
+![image](https://github.com/user-attachments/assets/14615a72-eac2-44f8-9d4b-4ce15b77d4da)
+
 Open IIS as an admin:
+
+![image](https://github.com/user-attachments/assets/330e1d06-283d-43af-bf6f-57d587e1d4fc)
+
 Next go to PHP Manager> Register new PHP version and then select the file shown:
-Go back to osticketVM Home and hit Restart under Manage Server on the right side:
+![image](https://github.com/user-attachments/assets/47a9ffed-e060-4100-9a15-48e66a8e2d6d)
+
+Go back to osticketVM Home and hit stop under Manage Server on the right side:
+
+![image](https://github.com/user-attachments/assets/1ed48429-7865-40fa-bc91-f2055c142d28)
+
+Then hit start under Manage Server on the right side:
+
+![image](https://github.com/user-attachments/assets/f4c8b04b-3f50-4350-95d3-ca7c1ca2de49)
+
 Next I'll download osTicket and copy the upload file to the wwwroot file in the inetpub directory:
+
+![image](https://github.com/user-attachments/assets/e4b14bd6-68f3-4095-bb28-fbd09e7cfcee)
+
 Rename upload file to osTicket:
-Reload IIS and restart the server as I did before, then click Browse *80 (http) on the right side:
+
+![image](https://github.com/user-attachments/assets/959787f7-5853-4ebd-ae02-2c309cc661af)
+
+Stop IIS and Start the server as I did before, then click Browse *80 (http) on the right side:
+
+![image](https://github.com/user-attachments/assets/45086c12-0f7c-4de8-8f2e-d48c85f96b6f)
+
+![image](https://github.com/user-attachments/assets/7b819bc4-75ed-4d69-ada4-5a87a2f59ce4)
+
 This page should open:
+
+![image](https://github.com/user-attachments/assets/f03bca4f-0985-4593-8740-e798d4a08337)
+
 Notice some extensions are not enabled. I'll enable a few of those in IIS. Go to Sites> Default Web Site> osTicket Click PHP Manager> Enable or disable an extension. Enable php_imap.dll, php_intl.dll, and php_opcache.dll:
+
+![image](https://github.com/user-attachments/assets/ccd2953c-0cd8-4533-8cd6-3ecef8dd7600)
+
 Note the changes here:
+
+![image](https://github.com/user-attachments/assets/3b41aac2-fa96-4880-848c-1268f6e5db56)
+
 Next browse in file explorer to C drive> osTicket> include> ost-sampleconfig.php and remove the "sample" from the name:
+
+![image](https://github.com/user-attachments/assets/be981826-ccc9-4fee-b33a-f212dfa5df26)
+
 Right-click on ost-config.php> Properties> Security> Advanced> Disable Inheritance> Remove all inherited permissions from this object:
+
+![image](https://github.com/user-attachments/assets/fe30a37a-8d9a-4827-8cc5-4deee4dfdb63)
+
 Click on the add buton to add permissions to the file> Select a principle> type "everyone"> Check> OK> check all permissions> OK> apply> OK:
+
+![image](https://github.com/user-attachments/assets/2818d9b2-ae04-498a-ae58-9ed9ef32b9c6)
+
 Hit continue on the osTicket web page in the browser and fill out the set up page:
+
+![image](https://github.com/user-attachments/assets/ea0bb2ab-fc87-495e-8449-deaf0f4bc9b0)
+
 Before database set up we'll have to connect the database using HeidiSQL. Install HeidiSQL from setup links:
+
+![image](https://github.com/user-attachments/assets/5296ca6f-2c9a-4a09-a485-b6f12ee85dd7)
+
 In HeidiSQL click New> Username = root> Password = mySQL password from mySQL setup> Open:
+
+![image](https://github.com/user-attachments/assets/b3aa0e3c-a798-4af0-93a2-eb5367a46069)
+
 In HeidiSQL right click Unnamed> Create> New Database> Name it osTicket> OK. Then continue to fill out the database portion of osTicket setup. Click Install Now when done.:
+
+![image](https://github.com/user-attachments/assets/a6e2e408-5597-4a17-90e4-85018e248644)
+
+![image](https://github.com/user-attachments/assets/e708c363-214f-4918-9768-3a11bf4739e9)
+
+![image](https://github.com/user-attachments/assets/09d54ad7-0768-458f-ab76-90455dc1fd62)
+
 Last steps, for clean up go to C drive> inetpub> wwwroot> osTicket and look for the setup file and delete it. Then go to C drive> inetpub> wwwroot> osTicket> include right click on ost-config.php> Properties> Security> Advanced> Select Everyone and click edit> only leave Read & Execute and Read checked, then apply settings:
 
 
