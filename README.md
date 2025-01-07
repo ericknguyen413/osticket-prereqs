@@ -153,6 +153,12 @@ In HeidiSQL right click Unnamed> Create> New Database> Name it osTicket> OK. The
 
 ![image](https://github.com/user-attachments/assets/09d54ad7-0768-458f-ab76-90455dc1fd62)
 
+Last steps, for clean up go to C drive> inetpub> wwwroot> osTicket and look for the setup file and delete it. Then go to C drive> inetpub> wwwroot> osTicket> include right click on ost-config.php> Properties> Security> Advanced> Select Everyone and click edit> only leave Read & Execute and Read checked, then apply settings:
+
+![image](https://github.com/user-attachments/assets/cb5729f5-3f54-4918-9644-6907156488ae)
+
+![image](https://github.com/user-attachments/assets/1cc8fa85-ea92-4833-b6ea-02b4d2cf50cf)
+
 <h2>osTicket Installed!</h2>
 
 <b>osTicket is now installed and ready for use! In the next project I will walk you through how to configure agents, their permissions and access, users, and more!  </b>
